@@ -68,17 +68,17 @@ gulp.task('lint', function() {
 });
 
 gulp.task('build:css', function() {
-  return gulp.src('src/bc-phone-number.css')
+  return gulp.src('src/bc-phone-number-plus.css')
     .pipe(gulp.dest('dist/css/'))
     .pipe(minifyCss())
-    .pipe(rename('bc-phone-number.min.css'))
+    .pipe(rename('bc-phone-number-plus.min.css'))
     .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('uglify', function() {
-  return gulp.src('dist/js/bc-phone-number.js')
+  return gulp.src('dist/js/bc-phone-number-plus.js')
     .pipe(uglify())
-    .pipe(rename('bc-phone-number.min.js'))
+    .pipe(rename('bc-phone-number-plus.min.js'))
     .pipe(gulp.dest('dist/js/'));
 });
 
@@ -99,7 +99,7 @@ gulp.task('inline-templates', function() {
     .pipe(templateCache({
       standalone: true,
       module: 'bcPhoneNumberTemplates',
-      root: 'bc-phone-number'
+      root: 'bc-phone-number-plus'
     }))
     .pipe(gulp.dest('build/js/'));
 });

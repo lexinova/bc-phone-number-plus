@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     browserify: {
       dist: {
-        files: {'dist/js/bc-phone-number.js': ['src/bc-phone-number.js']},
+        files: {'dist/js/bc-phone-number-plus.js': ['src/bc-phone-number-plus.js']},
         options: {
           browserifyOptions: {bundleExternal: false, standalone: 'bcPhoneNumber'}
         }

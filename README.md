@@ -1,10 +1,10 @@
-# bc-phone-number [![Build Status](https://travis-ci.org/blockchain/bc-phone-number.svg?branch=master)](https://travis-ci.org/blockchain/bc-phone-number)
+# bc-phone-number-plus [![Build Status](https://travis-ci.org/blockchain/bc-phone-number.svg?branch=master)](https://travis-ci.org/blockchain/bc-phone-number)
 
 ## Installation
 
 ### Bower
 ```bash
-bower install --save bc-phone-number
+bower install --save bc-phone-number-plus
 ```
 ```js
 angular.module('myApp', ['bcPhoneNumber'])
@@ -12,10 +12,10 @@ angular.module('myApp', ['bcPhoneNumber'])
 
 ### NPM
 ```bash
-npm install --save bc-phone-number
+npm install --save bc-phone-number-plus
 ```
 ```js
-angular.module('myApp', [require('bc-phone-number')])
+angular.module('myApp', [require('bc-phone-number-plus')])
 ```
 
 ### Other (not recommended)
@@ -23,7 +23,7 @@ Just download the [dist](https://github.com/blockchain/bc-phone-number/tree/mast
 
 ## Usage
 ```html
-<bc-phone-number ng-model='theNumber' default-country='us' preferred-countries='us gb ca' is-valid='isValid'></bc-phone-number>
+<bc-phone-number-plus ng-model='theNumber' default-country='us' preferred-countries='us gb ca' is-valid='isValid'></bc-phone-number-plus>
 ```
 
 ```js

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: bc-phone-number', function() {
+describe('Directive: bc-phone-number-plus', function() {
 
   // load the directive's module
   beforeEach(module('bcPhoneNumber'));
@@ -13,7 +13,7 @@ describe('Directive: bc-phone-number', function() {
   }));
 
   it('should make hidden element visible', inject(function($compile) {
-    var element = angular.element('<bc-phone-number ng-model="number"></bc-phone-number>');
+    var element = angular.element('<bc-phone-number-plus ng-model="number"></bc-phone-number-plus>');
     element = $compile(element)(scope);
 
     expect(scope.number).toBe(undefined);

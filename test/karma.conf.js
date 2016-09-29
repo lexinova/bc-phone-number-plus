@@ -30,9 +30,9 @@ module.exports = function(config) {
       '../bower_components/angular-mocks/angular-mocks.js',
       // endbower
 
-      '../dist/js/bc-phone-number.js',
+      '../dist/js/bc-phone-number-plus.js',
 
-      'bc-phone-number.js'
+      'bc-phone-number-plus.js'
     ],
 
     // list of files / patterns to exclude

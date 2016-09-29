@@ -1,8 +1,8 @@
 {
   "name": "bc-phone-number-plus",
   "main": [
-    "dist/css/bc-phone-number.css",
-    "dist/js/bc-phone-number.js"
+    "dist/css/bc-phone-number-plus.css",
+    "dist/js/bc-phone-number-plus.js"
   ],
   "version": "5.0.11",
   "authors": [

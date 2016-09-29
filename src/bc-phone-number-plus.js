@@ -30,7 +30,7 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
   }
 
   return {
-    templateUrl: 'bc-phone-number/bc-phone-number.html',
+    templateUrl: 'bc-phone-number-plus/bc-phone-number-plus.html',
     require: 'ngModel',
     scope: {
       preferredCountriesCodes: '@preferredCountries',
