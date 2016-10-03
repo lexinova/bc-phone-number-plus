@@ -81,7 +81,7 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
 
       scope.$watch('number', function(newValue) {
         if (newValue === '') { scope.ngModel = ''; }
-        else if (newValue.length === 1 && newValue !=="+") {
+        else if (typeof newValue !== "undefined" && newValue.length === 1 && newValue !=="+") {
         	newValue = scope.selectedCountry.dialCode + newValue;
         	addCurrentCode(newValue, scope);
         }
