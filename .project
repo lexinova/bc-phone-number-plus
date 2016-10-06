@@ -16,9 +16,27 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1475499750864</id>
+			<id>1475745580475</id>
 			<name>bower_components</name>
 			<type>26</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1475745580478</id>
+			<name>bower_components</name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1475745533355</id>
+			<name>node_modules</name>
+			<type>30</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-*</arguments>

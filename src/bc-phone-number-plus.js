@@ -37,7 +37,7 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       defaultCountryCode: '@defaultCountry',
       isValid: '=',
       ngModel: '=',
-      ngRequired: '<'
+      ngRequired: '='
     },
     link: function(scope, element, attrs, ctrl) {
       scope.selectedCountry = bcCountries.getCountryByIso2Code(scope.defaultCountryCode || 'us');
@@ -77,8 +77,11 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       });
 
       scope.$watch('number', function(newValue) {
-        ctrl.$setValidity('phoneNumber', bcCountries.isValidNumber(newValue));
-        scope.isValid = bcCountries.isValidNumber(newValue);
+        if(newValue !== "") {
+        	ctrl.$setValidity('phoneNumber', bcCountries.isValidNumber(newValue));
+        	scope.isValid = bcCountries.isValidNumber(newValue);
+        }
+        
       });
 
       scope.$watch('number', function(newValue) {
