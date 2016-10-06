@@ -37,13 +37,15 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       defaultCountryCode: '@defaultCountry',
       isValid: '=',
       ngModel: '=',
-      ngRequired: '='
+      ngRequired: '=',
+      iName: "="
     },
     link: function(scope, element, attrs, ctrl) {
       scope.selectedCountry = bcCountries.getCountryByIso2Code(scope.defaultCountryCode || 'us');
       scope.allCountries = bcCountries.getAllCountries();
       scope.number = scope.ngModel;
       scope.isRequired = scope.ngRequired;
+      scope.name = scope.iName;
 
       if (scope.preferredCountriesCodes) {
         var preferredCodes = scope.preferredCountriesCodes.split(' ');
