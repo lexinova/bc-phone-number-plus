@@ -1,6 +1,6 @@
 <section class="input-group input-group-sm">
   <div class="input-group-btn" uib-dropdown uib-keyboard-nav>
-    <button type="button" class="btn btn-default" type="button" uib-dropdown-toggle>
+    <button ng-disabled="isReadonly" type="button" class="btn btn-default" type="button" uib-dropdown-toggle>
       <span class="glyphicon iti-flag bc-phone-number-flag" ng-class="selectedCountry.iso2Code"></span><span class="caret"></span>
     </button>
     <ul class="uib-dropdown-menu bc-phone-number-dropdown-menu dropdown-menu" role="menu">
