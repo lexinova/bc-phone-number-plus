@@ -39,7 +39,7 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       ngModel: '=',
       ngRequired: '=',
       ngReadonly: '=',
-      name: '='
+      hasName: '='
     },
     link: function(scope, element, attrs, ctrl) {
       scope.selectedCountry = bcCountries.getCountryByIso2Code(scope.defaultCountryCode || 'us');
@@ -47,7 +47,7 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       scope.number = scope.ngModel;
       scope.isRequired = scope.ngRequired;
       scope.isReadonly = scope.ngReadonly;
-      scope.phone = scope.name;
+      scope.phone = scope.hasName;
 
       if (scope.preferredCountriesCodes) {
         var preferredCodes = scope.preferredCountriesCodes.split(' ');
