@@ -83,14 +83,14 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       var $input = angular.element(element.find('input[ng-model]'));
       var $formGroup = $input.closest('.form-group');
 
-      scope.$watch(function(){
+      scope.$watch(function() {
     	  return !($input.attr('class').search('k-invalid') < 0);  
       	}, function(isInvalid) {
       		$formGroup.toggleClass('has-error', isInvalid);
       });
-      
+
       scope.$watch('number', function(newValue) {
-        if(newValue !== "") {
+    	  if(newValue !== "") {
         	ctrl.$setValidity('phoneNumber', bcCountries.isValidNumber(newValue));
         	scope.isValid = bcCountries.isValidNumber(newValue);
         }
