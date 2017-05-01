@@ -48,6 +48,13 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       scope.isRequired = scope.ngRequired;
       scope.isReadonly = scope.ngReadonly;
       scope.phone = scope.hasName;
+      scope.onPress = function(e){
+		  var inp = element.find('.form-control')[0];
+    	  if (e.charCode >= 48 && e.charCode <= 57 && inp.value.length == 0) {
+        	inp.value = scope.selectedCountry.dialCode + inp.value;
+        	addCurrentCode(inp.value, scope);
+        }
+      };
 
       if (scope.preferredCountriesCodes) {
         var preferredCodes = scope.preferredCountriesCodes.split(' ');
@@ -77,7 +84,7 @@ angular.module('bcPhoneNumber', ['bcPhoneNumberTemplates', 'ui.bootstrap'])
       };
 
       scope.$watch('ngModel', function(newValue) {
-        scope.number = newValue;
+    	  scope.number = newValue;
       });
 
       var $input = angular.element(element.find('input[ng-model]'));
